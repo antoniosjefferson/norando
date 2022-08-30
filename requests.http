@@ -1,0 +1,21 @@
+### Show All Posts
+GET http://localhost:3000/posts
+
+### Show Specific Post
+GET http://localhost:3000/posts/1
+
+### Show All Games
+GET http://localhost:3000/games
+
+### Show Specific Game
+GET http://localhost:3000/games/1
+
+### Create Post
+POST http://localhost:3000/posts
+Content-Type: application/json
+
+{
+	"title": "RANDOMS SUCK!",
+	"body": "SEND HELP PLEASE!"
+}
+
