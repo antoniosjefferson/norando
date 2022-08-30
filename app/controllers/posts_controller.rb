@@ -20,4 +20,15 @@ class PostsController < ApplicationController
       render json: { errors: post.errors.full_messages }, status: 404
     end
   end
+
+  def update
+    post = Post.find(params[:id])
+    post.title = params[:title] || post.title
+    post.body = params[:body] || post.body
+    if post.save
+      render json: post
+    else
+      render json: { errors: post.errors.full_messages }, status: :unprocessable_entity
+    end
+  end
 end

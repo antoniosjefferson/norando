@@ -6,4 +6,4 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-post = Post.create!(title: "Anyone wanna play Apex ranked? Need 2", body: "I main Seer so please, no Bloodhounds. Preferably a movement Legend like Valkyrie")
+# post = Post.create!(title: "Anyone wanna play Apex ranked? Need 2", body: "I main Seer so please, no Bloodhounds. Preferably a movement Legend like Valkyrie")

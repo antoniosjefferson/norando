@@ -19,3 +19,8 @@ Content-Type: application/json
 	"body": "SEND HELP PLEASE!"
 }
 
+### Update Post
+PATCH http://localhost:3000/posts/2
+Content-Type: application/json
+
+
