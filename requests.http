@@ -1,3 +1,25 @@
+# Ninja's jwt: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjIwNTU1Mzd9.ERdM6J6pYezdMzDL1CbcL9JkAQs1iL4N6AKIAAy0vrU
+
+### Users create (signup)
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+  "username": "Ninja",
+  "email": "ninja@test.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+
+### Sessions create (login)
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "ninja@test.com",
+  "password": "password"
+}
+
 ### Show All Games
 GET http://localhost:3000/games
 
@@ -9,8 +31,8 @@ GET http://localhost:3000/posts
 
 ### Create Post
 POST http://localhost:3000/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjIwNTU1Mzd9.ERdM6J6pYezdMzDL1CbcL9JkAQs1iL4N6AKIAAy0vrU
 Content-Type: application/json
+Authorization: Bearer 
 
 {
 	"title": "Ninja needs a teammate?",
@@ -26,28 +48,7 @@ Content-Type: application/json
 "body": "did it work?"
 }
 
-### Users create (signup)
-POST http://localhost:3000/users.json
-Content-Type: application/json
-
-{
-  "username": "Ninja",
-  "email": "ninja@test.com",
-  "password": "password",
-  "password_confirmation": "password"
-}
-
-# Ninja's jwt: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjIwNTU1Mzd9.ERdM6J6pYezdMzDL1CbcL9JkAQs1iL4N6AKIAAy0vrU
-
-### Sessions create (login)
-POST http://localhost:3000/sessions.json
-Content-Type: application/json
-
-{
-  "email": "ninja@test.com",
-  "password": "password"
-}
-
 ### Destroy post
 DELETE http://localhost:3000/posts/2.json
 Content-Type: application/json
+Authorization: Bearer
