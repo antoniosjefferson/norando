@@ -31,4 +31,10 @@ class PostsController < ApplicationController
       render json: { errors: post.errors.full_messages }, status: :unprocessable_entity
     end
   end
+
+  def destroy
+    post = Post.find_by(id: params[:id])
+    post.destroy
+    render json: { message: "Post successfully deleted." }
+  end
 end

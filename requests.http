@@ -1,14 +1,20 @@
-### Show All Posts
-GET http://localhost:3000/posts
-
-### Show Specific Post
-GET http://localhost:3000/posts/1
-
 ### Show All Games
 GET http://localhost:3000/games
 
 ### Show Specific Game
 GET http://localhost:3000/games/1
+
+### Show All Posts
+GET http://localhost:3000/posts
+
+### Create Post
+POST http://localhost:3000/posts
+Content-Type: application/json
+
+{
+	"title": "RANDOMS SUCK!",
+	"body": "SEND HELP PLEASE!"
+}
 
 ### Create Post
 POST http://localhost:3000/posts
@@ -23,4 +29,22 @@ Content-Type: application/json
 PATCH http://localhost:3000/posts/2
 Content-Type: application/json
 
+### Users create (signup)
+POST http://localhost:3000/users.json
+Content-Type: application/json
 
+{
+  "username": "Test name",
+  "email": "test@test.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+
+
+### Sessions create (signin)
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+### Destroy post
+DELETE http://localhost:3000/posts/2.json
+Content-Type: application/json
