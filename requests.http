@@ -9,20 +9,12 @@ GET http://localhost:3000/posts
 
 ### Create Post
 POST http://localhost:3000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjIwNTU1Mzd9.ERdM6J6pYezdMzDL1CbcL9JkAQs1iL4N6AKIAAy0vrU
 Content-Type: application/json
 
 {
-	"title": "RANDOMS SUCK!",
-	"body": "SEND HELP PLEASE!"
-}
-
-### Create Post
-POST http://localhost:3000/posts
-Content-Type: application/json
-
-{
-	"title": "RANDOMS SUCK!",
-	"body": "SEND HELP PLEASE!"
+	"title": "Ninja needs a teammate?",
+	"body": "Anyone but Nick Mercs..???"
 }
 
 ### Update Post
@@ -39,16 +31,22 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "username": "Test name",
-  "email": "test@test.com",
+  "username": "Ninja",
+  "email": "ninja@test.com",
   "password": "password",
   "password_confirmation": "password"
 }
 
+# Ninja's jwt: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjIwNTU1Mzd9.ERdM6J6pYezdMzDL1CbcL9JkAQs1iL4N6AKIAAy0vrU
 
-### Sessions create (signin)
+### Sessions create (login)
 POST http://localhost:3000/sessions.json
 Content-Type: application/json
+
+{
+  "email": "ninja@test.com",
+  "password": "password"
+}
 
 ### Destroy post
 DELETE http://localhost:3000/posts/2.json
