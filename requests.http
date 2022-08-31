@@ -26,8 +26,13 @@ Content-Type: application/json
 }
 
 ### Update Post
-PATCH http://localhost:3000/posts/2
+PATCH http://localhost:3000/posts/3
 Content-Type: application/json
+
+{
+"title": "New title",
+"body": "did it work?"
+}
 
 ### Users create (signup)
 POST http://localhost:3000/users.json
