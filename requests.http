@@ -26,8 +26,9 @@ Authorization: Bearer {{ninjas_jwt}}
 Content-Type: application/json
 
 {
-	"title": "TEST 2",
-	"body": "jkbsajd"
+	"title": "TEST 3",
+	"body": "abcdefg",
+  "game_id": 2
 }
 
 ### Update Post
@@ -49,10 +50,12 @@ Authorization: Bearer
 # Content-Type: application/json
 
 ### Show All Games
-GET http://localhost:3000/games
+GET http://localhost:3000/games.json
 
 ### Show Specific Game
-GET http://localhost:3000/games/1
+GET http://localhost:3000/games/1.json
 
 ### Show All Posts
-GET http://localhost:3000/posts
+GET http://localhost:3000/posts.json
+Authorization: Bearer {{ninjas_jwt}}
+Content-Type: application/json

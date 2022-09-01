@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user
+  before_action :authenticate_user, except: [:index]
 
   def index
     posts = Post.all
@@ -16,6 +16,8 @@ class PostsController < ApplicationController
     post = Post.new(
       title: params[:title],
       body: params[:body],
+      user_id: current_user.id,
+      game_id: params[:game_id],
     )
     if post.save
       render json: post
