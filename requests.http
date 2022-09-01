@@ -1,4 +1,4 @@
-# Ninja's jwt: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjIwNTU1Mzd9.ERdM6J6pYezdMzDL1CbcL9JkAQs1iL4N6AKIAAy0vrU
+@ninjas_jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjIxMzcxMTN9.RqlIp5yxa8QmhfNV7Ri7763YtX9OvEgtIZl0lHao2uQ
 
 ### Users create (signup)
 POST http://localhost:3000/users.json
@@ -20,23 +20,14 @@ Content-Type: application/json
   "password": "password"
 }
 
-### Show All Games
-GET http://localhost:3000/games
-
-### Show Specific Game
-GET http://localhost:3000/games/1
-
-### Show All Posts
-GET http://localhost:3000/posts
-
 ### Create Post
 POST http://localhost:3000/posts
+Authorization: Bearer {{ninjas_jwt}}
 Content-Type: application/json
-Authorization: Bearer 
 
 {
-	"title": "Ninja needs a teammate?",
-	"body": "Anyone but Nick Mercs..???"
+	"title": "TEST 2",
+	"body": "jkbsajd"
 }
 
 ### Update Post
@@ -48,7 +39,20 @@ Content-Type: application/json
 "body": "did it work?"
 }
 
-### Destroy post
+### Delete post
 DELETE http://localhost:3000/posts/2.json
 Content-Type: application/json
 Authorization: Bearer
+
+# ### Delete User (USED TO DELETE FIRST 2 USERS)
+# DELETE http://localhost:3000/users/2.json
+# Content-Type: application/json
+
+### Show All Games
+GET http://localhost:3000/games
+
+### Show Specific Game
+GET http://localhost:3000/games/1
+
+### Show All Posts
+GET http://localhost:3000/posts

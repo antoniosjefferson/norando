@@ -23,6 +23,9 @@ Rails.application.routes.draw do
   # Destroy post
   delete "/posts/:id" => "posts#destroy"
 
+  # Delete user (used to delete first 2 users)
+  # delete "/users/:id" => "users#destroy"
+
   # Show specific post
   # get "/posts/:id" => "posts#show"
 end
