@@ -1,4 +1,4 @@
-@ninjas_jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjIxMzcxMTN9.RqlIp5yxa8QmhfNV7Ri7763YtX9OvEgtIZl0lHao2uQ
+@ninjas_jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjIyMzE0OTh9.iZLIaZTYsz6S1oW0APKRonS89gMWEyDT-NC8U58dZXQ
 
 ### Users create (signup)
 POST http://localhost:3000/users.json
@@ -32,18 +32,21 @@ Content-Type: application/json
 }
 
 ### Update Post
-PATCH http://localhost:3000/posts/3
+PATCH http://localhost:3000/posts/7
+Authorization: Bearer {{ninjas_jwt}}
 Content-Type: application/json
 
 {
-"title": "New title",
-"body": "did it work?"
+"title": "Lucky numba 7",
+"body": "did it work?",
+"game_id": 4
 }
 
 ### Delete post
-DELETE http://localhost:3000/posts/2.json
+DELETE http://localhost:3000/posts/6.json
+Authorization: Bearer {{ninjas_jwt}}
 Content-Type: application/json
-Authorization: Bearer
+
 
 # ### Delete User (USED TO DELETE FIRST 2 USERS)
 # DELETE http://localhost:3000/users/2.json

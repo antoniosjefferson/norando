@@ -30,6 +30,8 @@ class PostsController < ApplicationController
     post = Post.find(params[:id])
     post.title = params[:title] || post.title
     post.body = params[:body] || post.body
+    post.user_id = current_user.id
+    post.game_id = params[:game_id]
     if post.save
       render json: post
     else
