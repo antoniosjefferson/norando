@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user, except: [:index]
+  before_action :authenticate_user, except: [:index] # makes it so users must be logged in to use these actions, BESIDES the index
 
   def index
     posts = Post.all
