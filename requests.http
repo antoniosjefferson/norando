@@ -1,12 +1,16 @@
-@ninjas_jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjIyMzE0OTh9.iZLIaZTYsz6S1oW0APKRonS89gMWEyDT-NC8U58dZXQ
+@ninjas_jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjI1Nzc3NDR9._u03OrZBk-UrU8IKUluu0Augx2IiGlqxEj_KtupX7Ss
+
+@nicks_jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NjI1Nzc3Njl9.5g_pvL2VYZ_yBeyT9U69o9LPyaB_UUT-YOwMs1DZBsQ
+
+@wubsaws_jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE2NjI1Nzc4Nzd9.N-Z1zjB91yu-811dhCnGIwFhAmdDRAQ3r57JHHNpQaY
 
 ### Users create (signup)
 POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "username": "Ninja",
-  "email": "ninja@test.com",
+  "username": "wubsaw",
+  "email": "wubsaw@test.com",
   "password": "password",
   "password_confirmation": "password"
 }
@@ -16,7 +20,7 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "ninja@test.com",
+  "email": "wubsaw@test.com",
   "password": "password"
 }
 
@@ -26,24 +30,24 @@ Authorization: Bearer {{ninjas_jwt}}
 Content-Type: application/json
 
 {
-	"title": "TEST post",
-	"body": "lololol",
-  "game_id": 2
+	"title": "How do you do 90s again",
+	"body": "I forgot...",
+  "game_id": 1
 }
 
 ### Update Post
-PATCH http://localhost:3000/posts/7
-Authorization: Bearer {{ninjas_jwt}}
+PATCH http://localhost:3000/posts/11
+Authorization: Bearer {{nicks_jwt}}
 Content-Type: application/json
 
 {
-"title": "Lucky numba 7",
-"body": "did it work?",
-"game_id": 4
+"title": "Anyone down to play besides Ninja???",
+"body": "Please don't invite him either...",
+"game_id": 1
 }
 
 ### Delete post
-DELETE http://localhost:3000/posts/6.json
+DELETE http://localhost:3000/posts/15.json
 Authorization: Bearer {{ninjas_jwt}}
 Content-Type: application/json
 
