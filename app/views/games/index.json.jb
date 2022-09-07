@@ -1,0 +1,8 @@
+@games.map do |game|
+  {
+    id: game.id,
+    title: game.title,
+    release_date: game.release_date,
+    description: game.description,
+  }
+end

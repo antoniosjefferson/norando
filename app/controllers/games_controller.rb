@@ -1,11 +1,11 @@
 class GamesController < ApplicationController
   def index
-    games = Game.all
-    render json: (games)
+    @games = Game.all
+    render :index
   end
 
   def show
-    game = Game.find(params[:id])
-    render json: (game)
+    @game = Game.find(params[:id])
+    render :show
   end
 end
