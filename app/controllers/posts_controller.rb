@@ -9,8 +9,8 @@ class PostsController < ApplicationController
   # end
 
   def index
-    posts = Post.all
-    render json: (posts)
+    @posts = Post.all
+    render :index
   end
 
   # Show action

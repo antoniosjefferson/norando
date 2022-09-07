@@ -1,5 +1,9 @@
 {
   id: @post.id,
+  title: @post.title,
+  body: @post.body,
+  user_id: @post.user_id,
+  game_id: @post.game_id,
   created_at: @post.created_at,
   updated_at: @post.updated_at
 }
